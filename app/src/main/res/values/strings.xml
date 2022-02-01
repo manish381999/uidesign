@@ -1,0 +1,21 @@
+<resources>
+    <string name="app_name">UIDesign</string>
+    <string name="cart">CART</string>
+    <string name="snoopy_t_shirt">Snoopy T-shirt</string>
+    <string name="ref_04559812">Ref 04559812</string>
+    <string name="s">S</string>
+    <string name="do_you_have_a_promotional_code">Do you have a promotional code?</string>
+    <string name="delivery">Delivery</string>
+    <string name="standard_free">Standard-Free</string>
+    <string name="buy_for_100">BUY FOR $100</string>
+    <string name="t_shirts">T-SHIRTS</string>
+    <string name="clothing">CLOTHING .</string>
+    <string name="v_neck_t_shirt">V-neck T-shirt</string>
+    <string name="_28">$28</string>
+    <string name="american_armholes">American armholes</string>
+    <string name="ramones_t_shirt">Ramones T-shirt</string>
+    <string name="_26">$26</string>
+    <string name="_40">$40</string>
+    <string name="_30">$30</string>
+    <string name="_15" >$15</string>
+</resources>

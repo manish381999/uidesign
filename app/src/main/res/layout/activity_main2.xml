@@ -1,0 +1,332 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".MainActivity2">
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        tools:ignore="MissingConstraints">
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+   <ImageView
+       android:id="@+id/im_back"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        android:src="@drawable/left_arrow"
+       android:layout_margin="@dimen/margin_medium"
+       />
+
+    <ImageView
+        android:id="@+id/im_search"
+        android:layout_width="22dp"
+        android:layout_height="22dp"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:src="@drawable/search_icon"
+        android:layout_margin="@dimen/margin_medium"/>
+
+
+
+            <TextView
+                android:id="@+id/tv_search"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/clothing"
+                android:textSize="@dimen/text_large"
+                android:layout_marginTop="@dimen/margin_x_large"
+                android:textStyle="bold"
+                android:layout_marginStart="@dimen/margin_large"
+               app:layout_constraintTop_toBottomOf="@id/im_back"
+                app:layout_constraintStart_toStartOf="parent"/>
+            <TextView
+                android:id="@+id/tv_search_item"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/t_shirts"
+                android:textStyle="bold"
+                android:textColor="@color/black"
+                android:textSize="@dimen/text_large"
+                android:layout_marginTop="@dimen/margin_x_large"
+                app:layout_constraintTop_toBottomOf="@id/im_back"
+                app:layout_constraintStart_toEndOf="@id/tv_search"/>
+
+            <ImageView
+                android:id="@+id/im_filter"
+                android:layout_width="30sp"
+                android:layout_height="30sp"
+                android:src="@drawable/filter_icon"
+               app:layout_constraintTop_toBottomOf="@id/im_search"
+                android:layout_marginEnd="@dimen/margin_x_large"
+                android:layout_marginTop="@dimen/margin_x_large"
+                app:layout_constraintEnd_toEndOf="parent"/>
+
+            <View
+                android:id="@+id/view1"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:layout_marginTop="@dimen/margin_medium"
+                app:layout_constraintTop_toBottomOf="@id/tv_search_item"
+                android:background="@drawable/view_background"/>
+
+
+              <GridLayout
+                  android:id="@+id/grid"
+                  android:layout_width="match_parent"
+                  android:layout_height="wrap_content"
+                  android:layout_margin="@dimen/margin_medium"
+                  app:layout_constraintTop_toBottomOf="@id/view1"
+                  app:layout_constraintBottom_toBottomOf="parent"
+                  android:rowCount="3"
+                  android:columnCount="2">
+
+
+                  <LinearLayout
+                      android:id="@+id/ll_product1"
+                      android:layout_gravity="fill"
+                      android:layout_columnWeight="1"
+                      android:layout_rowWeight="1"
+                      android:orientation="vertical"
+                      tools:ignore="UselessParent">
+
+                      <com.makeramen.roundedimageview.RoundedImageView
+                          android:id="@+id/storyImage"
+                          android:layout_width="150dp"
+                          android:layout_height="200dp"
+                          android:layout_marginStart="@dimen/margin_x_large"
+                          android:layout_marginTop="@dimen/margin_medium"
+                          android:scaleType="centerCrop"
+                          android:src="@drawable/image3"
+                          app:riv_corner_radius="@dimen/margin_small" />
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="@dimen/margin_x_large"
+                          android:layout_marginTop="@dimen/margin_small"
+                          android:text="@string/v_neck_t_shirt"
+                          android:textColor="@color/black"
+                          android:textSize="@dimen/text_large"
+                          android:textStyle="bold" />
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="@dimen/margin_x_large"
+                          android:layout_marginTop="@dimen/margin_x_small"
+                          android:text="@string/_30"
+                          android:textSize="@dimen/text_medium"
+                          android:textStyle="bold" />
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:id="@+id/ll_product2"
+                      android:layout_gravity="fill"
+                      android:layout_columnWeight="1"
+                      android:layout_rowWeight="1"
+                      android:orientation="vertical"
+                      tools:ignore="UselessParent">
+
+                      <com.makeramen.roundedimageview.RoundedImageView
+                          android:id="@+id/Image2"
+                          android:layout_width="150dp"
+                          android:layout_height="200dp"
+                         android:layout_marginStart="@dimen/margin_x_large"
+                          android:layout_marginTop="@dimen/margin_medium"
+                          android:scaleType="centerCrop"
+                          android:src="@drawable/image4"
+                          app:riv_corner_radius="@dimen/margin_small" />
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="@dimen/margin_x_large"
+                          android:layout_marginTop="@dimen/margin_small"
+                          android:text="@string/american_armholes"
+                          android:textColor="@color/black"
+                          android:textSize="@dimen/text_large"
+                          android:textStyle="bold" />
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="@dimen/margin_x_large"
+                          android:layout_marginTop="@dimen/margin_x_small"
+                          android:text="@string/_28"
+                          android:textSize="@dimen/text_medium"
+                          android:textStyle="bold" />
+                  </LinearLayout>
+
+
+                  <LinearLayout
+                      android:id="@+id/ll_product3"
+                      android:layout_gravity="fill"
+                      android:layout_columnWeight="1"
+                      android:layout_rowWeight="1"
+                      android:orientation="vertical"
+                      tools:ignore="UselessParent">
+
+                      <com.makeramen.roundedimageview.RoundedImageView
+                          android:id="@+id/Image3"
+                          android:layout_width="150dp"
+                          android:layout_height="200dp"
+                         android:layout_marginStart="@dimen/margin_x_large"
+                          android:layout_marginTop="@dimen/margin_medium"
+                          android:scaleType="centerCrop"
+                          android:src="@drawable/image_5"
+                          app:riv_corner_radius="@dimen/margin_small" />
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="@dimen/margin_x_large"
+                          android:layout_marginTop="@dimen/margin_small"
+                         android:text="@string/ramones_t_shirt"
+                          android:textColor="@color/black"
+                          android:textSize="@dimen/text_large"
+                          android:textStyle="bold" />
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="@dimen/margin_x_large"
+                          android:layout_marginTop="@dimen/margin_x_small"
+                          android:text="@string/_26"
+                          android:textSize="@dimen/text_medium"
+                          android:textStyle="bold" />
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:id="@+id/ll_product4"
+                      android:layout_gravity="fill"
+                      android:layout_columnWeight="1"
+                      android:layout_rowWeight="1"
+                      android:orientation="vertical"
+                      tools:ignore="UselessParent">
+
+                      <com.makeramen.roundedimageview.RoundedImageView
+                          android:id="@+id/Image4"
+                          android:layout_width="150dp"
+                          android:layout_height="200dp"
+                          android:layout_marginStart="@dimen/margin_x_large"
+                          android:layout_marginTop="@dimen/margin_medium"
+                          android:scaleType="centerCrop"
+                          android:src="@drawable/image1"
+                          app:riv_corner_radius="@dimen/margin_small" />
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="@dimen/margin_x_large"
+                          android:layout_marginTop="@dimen/margin_small"
+                          android:text="@string/ramones_t_shirt"
+                          android:textColor="@color/black"
+                          android:textSize="@dimen/text_large"
+                          android:textStyle="bold" />
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="@dimen/margin_x_large"
+                          android:layout_marginTop="@dimen/margin_x_small"
+                          android:text="@string/_40"
+                          android:textSize="@dimen/text_medium"
+                          android:textStyle="bold" />
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:id="@+id/ll_product5"
+                      android:layout_gravity="fill"
+                      android:layout_columnWeight="1"
+                      android:layout_rowWeight="1"
+                      android:orientation="vertical"
+                      tools:ignore="UselessParent">
+
+                      <com.makeramen.roundedimageview.RoundedImageView
+                          android:id="@+id/Image5"
+                          android:layout_width="150dp"
+                          android:layout_height="200dp"
+                          android:layout_marginStart="@dimen/margin_x_large"
+                          android:layout_marginTop="@dimen/margin_medium"
+                          android:scaleType="centerCrop"
+                          android:src="@drawable/image2"
+                          app:riv_corner_radius="@dimen/margin_small" />
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="@dimen/margin_x_large"
+                          android:layout_marginTop="@dimen/margin_small"
+                          android:text="@string/american_armholes"
+                          android:textColor="@color/black"
+                          android:textSize="@dimen/text_large"
+                          android:textStyle="bold" />
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="@dimen/margin_x_large"
+                          android:layout_marginTop="@dimen/margin_x_small"
+                          android:text="@string/_15"
+                          android:textSize="@dimen/text_medium"
+                          android:textStyle="bold" />
+                  </LinearLayout>
+
+                  <LinearLayout
+                      android:id="@+id/ll_product6"
+                      android:layout_gravity="fill"
+                      android:layout_columnWeight="1"
+                      android:layout_rowWeight="1"
+                      android:orientation="vertical"
+                      tools:ignore="UselessParent">
+
+                      <com.makeramen.roundedimageview.RoundedImageView
+                          android:id="@+id/Image6"
+                          android:layout_width="150dp"
+                          android:layout_height="200dp"
+                          android:layout_marginStart="@dimen/margin_x_large"
+                          android:layout_marginTop="@dimen/margin_medium"
+                          android:scaleType="centerCrop"
+                          android:src="@drawable/image_5"
+                          app:riv_corner_radius="@dimen/margin_small" />
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="@dimen/margin_x_large"
+                          android:layout_marginTop="@dimen/margin_small"
+                          android:text="@string/ramones_t_shirt"
+                          android:textColor="@color/black"
+                          android:textSize="@dimen/text_large"
+                          android:textStyle="bold" />
+
+                      <TextView
+                          android:layout_width="wrap_content"
+                          android:layout_height="wrap_content"
+                          android:layout_marginStart="@dimen/margin_x_large"
+                          android:layout_marginTop="@dimen/margin_x_small"
+                          android:text="@string/_26"
+                          android:textSize="@dimen/text_medium"
+                          android:textStyle="bold" />
+                  </LinearLayout>
+
+              </GridLayout>
+
+
+
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </ScrollView>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>
